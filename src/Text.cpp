@@ -15,30 +15,30 @@ Text::~Text(){
 
 void Text::read(std::string fileName) {
 
-    std::string word;
-    std::ifstream MyFile(fileName);
+  std::string word;
+  std::ifstream MyFile(fileName);
 
-    if (!MyFile.is_open()) {
-	std::cout << "File does not exist" << "\n";
-	return;
-    }
-
-    while (MyFile >> word) {
-        words.push_back(word);
-    }
-
-    MyFile.close();
-
+  if (!MyFile.is_open()) {
+    std::cout << "File does not exist" << "\n";
     return;
+  }
+
+  while (MyFile >> word) {
+    words.push_back(word);
+  }
+
+  MyFile.close();
+
+  return;
 }
 
 int Text::countOccurence(std::string word) {
 
   int count = 0;
   for (auto &w : words) {
-	if (w == word) {
-	  count++;
-	}
+    if (w == word) {
+      count++;
+    }
   }
   return count;
 }
@@ -54,4 +54,5 @@ void Text::removePunctuation(){
 void Text::lowerCaseWords() {
 
 }
+
 

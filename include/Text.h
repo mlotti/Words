@@ -5,7 +5,7 @@
 
 class Text {
  private:
-   std::vector<std::string> words;
+  std::vector<std::string> words;
  public:
 
   Text();
@@ -22,6 +22,5 @@ class Text {
   void lowerCaseWords();
 
 };
-
 
 #endif
