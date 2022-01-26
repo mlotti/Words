@@ -17,8 +17,7 @@ and executed with
 
 # TO-DO: 
 
-* speed up
-* additional testing
+* Speed up
 * Further cleaning of text 
 
 # Future exstensions
