@@ -22,9 +22,15 @@ int main()
 
     text.removePunctuation();
 
-    // Brute force all words
+
     for (auto &x : text.getWords()) {
-      result.insert(std::pair<std::string, int>(x, text.countOccurence(x)));
+      if (result.count(x)) {
+	   // Check if the word is part of the map and increment the occurence
+           result.find(x)->second++;
+        } else {
+	  // if the word is new we insert it to the map
+          result.insert(std::pair<std::string, int>(x, 1));
+        }
     }
 
     // Print the occurence of all words in the map
