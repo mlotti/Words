@@ -1,6 +1,6 @@
 CFLAGS = -O
 CC = g++
-INC = -I../include -I. -I../src
+INC = -I../interface -I. -I../src
 
 all: Text.o Test.o main.o
 	$(CC) $(CFLAGS) -o exe main.o Text.o Test.o
