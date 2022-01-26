@@ -14,6 +14,7 @@ int main()
   if (1) {
     std::cout << "TEST 1 PASSED: " << test.testReading() << "\n";
     std::cout << "TEST 2 PASSED: " << test.testOccurence() << "\n";
+    std::cout << "TEST 3 PASSED: " << test.testGetOccurenceMap() << "\n";
   }
 
   text.read("../test/test.txt");
@@ -25,8 +26,8 @@ int main()
   result = text.getOccurenceMap();
 
   // Print the occurence of all words in the map
-  for (auto &x : result) {
-    std::cout << " " << x.second << ": " << x.first << "\n";
+  for (auto &element : result) {
+    std::cout << " " << element.second << ": " << element.first << "\n";
   }
 
     return 0;

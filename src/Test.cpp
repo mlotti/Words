@@ -24,3 +24,8 @@ bool Test::testOccurence() {
   return t.countOccurence("that") == 2;
 }
 
+bool Test::testGetOccurenceMap() {
+  Text t;
+  t.read("../test/test1.txt");
+  return t.getOccurenceMap().count("do") && t.getOccurenceMap().find("do")->second == 2;
+}

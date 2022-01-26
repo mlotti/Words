@@ -15,6 +15,7 @@ class Test {
 
   bool testOccurence();
 
+  bool testGetOccurenceMap();
 };
 
 
