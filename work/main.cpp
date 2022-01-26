@@ -19,19 +19,10 @@ int main()
   text.read("../test/test.txt");
 
   // removes dots, commas, question marks, etc.
-
   text.removePunctuation();
 
-  for (auto &x : text.getWords()) {
-    // Check if the word is part of the map
-    if (result.count(x)) {
-      // Increment the occurence by one
-      result.find(x)->second++;
-    } else {
-      // if the word is new we insert it to the map
-      result.insert(std::pair<std::string, int>(x, 1));
-    }
-  }
+  // creates the map with unique words and their occurances
+  result = text.getOccurenceMap();
 
   // Print the occurence of all words in the map
   for (auto &x : result) {

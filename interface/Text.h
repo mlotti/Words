@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <map>
+
 class Text {
  private:
   std::vector<std::string> words;
@@ -16,6 +17,8 @@ class Text {
   int countOccurence(std::string word);
 
   std::vector<std::string> getWords() {return words;}
+
+  std::map<std::string, int> getOccurenceMap();
 
   void removePunctuation();
 

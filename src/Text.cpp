@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <map>
 
 #include "Text.h"
 
@@ -41,6 +42,23 @@ int Text::countOccurence(std::string word) {
     }
   }
   return count;
+}
+
+std::map<std::string, int> Text::getOccurenceMap() {
+
+  std::map<std::string, int> result;
+
+  for (auto &word : words) {
+    // Check if the word is part of the map
+    if (result.count(word)) {
+      // Increment the occurence by one
+      result.find(word)->second++;
+    } else {
+      // if the word is new we insert it to the map
+      result.insert(std::pair<std::string, int>(word, 1));
+    }
+  }
+  return result;
 }
 
 void Text::removePunctuation(){
