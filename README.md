@@ -39,11 +39,10 @@ TEST PASSED
 # TO-DO: 
 
 * Speed up
-* Further cleaning of text 
 
 # Future exstensions
 
 * What is the most common word? 
 * What is the amount of words?
 * What is the longest word?
-
+* What is the amount of rows?
