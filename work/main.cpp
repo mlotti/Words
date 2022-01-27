@@ -12,9 +12,21 @@ int main()
   Test test;
 
   if (1) {
-    std::cout << "TEST 1 PASSED: " << test.testReading() << "\n";
-    std::cout << "TEST 2 PASSED: " << test.testOccurence() << "\n";
-    std::cout << "TEST 3 PASSED: " << test.testGetOccurenceMap() << "\n";
+    std::cout << "---------------------- " << "\n";
+
+    std::cout << "RUNNING testReading: " << "\n";
+    test.print(test.testReading());
+
+    std::cout << "RUNNING testPunctuation: " << "\n";
+    test.print(test.testPunctuation());
+
+    std::cout << "RUNNING testOccurence: " << "\n";
+    test.print(test.testOccurence());
+
+    std::cout << "RUNNING testGetOccurenceMap: " << "\n";
+    test.print(test.testGetOccurenceMap());
+
+    std::cout << "---------------------- " << "\n";
   }
 
   text.read("../test/test.txt");
@@ -24,6 +36,8 @@ int main()
 
   // creates the map with unique words and their occurances
   result = text.getOccurenceMap();
+
+  std::cout << " Result on test.txt " << "\n";
 
   // Print the occurence of all words in the map
   for (auto &element : result) {
