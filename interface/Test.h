@@ -19,6 +19,8 @@ class Test {
 
   bool testGetOccurenceMap();
 
+  bool testLowerCaseWords();
+
   void print(bool result);
 };
 

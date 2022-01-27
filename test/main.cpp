@@ -21,6 +21,9 @@ int main()
     std::cout << "RUNNING testPunctuation: " << "\n";
     test.print(test.testPunctuation());
 
+    std::cout << "RUNNING testLowerCaseWords: " << "\n";
+    test.print(test.testLowerCaseWords());
+
     std::cout << "RUNNING testOccurence: " << "\n";
     test.print(test.testOccurence());
 
@@ -34,6 +37,9 @@ int main()
 
   // removes dots, commas, question marks, etc.
   text.removePunctuation();
+
+  // all words to lowercase
+//  text.lowerCaseWords();
 
   // creates the map with unique words and their occurances
   result = text.getOccurenceMap();
