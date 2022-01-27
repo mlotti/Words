@@ -14,6 +14,8 @@ class Text {
 
   void read(std::string fileName);
 
+  void addWord(std::string word);
+
   int countOccurence(std::string word);
 
   std::vector<std::string> getWords() {return words;}

@@ -33,6 +33,10 @@ void Text::read(std::string fileName) {
   return;
 }
 
+void Text::addWord(std::string word) {
+  words.push_back(word);
+}
+
 int Text::countOccurence(std::string word) {
 
   int count = 0;
@@ -64,7 +68,12 @@ std::map<std::string, int> Text::getOccurenceMap() {
 void Text::removePunctuation(){
 
   for (auto &word : words) {
-    word.erase(std::remove_if(word.begin(), word.end(), ispunct), word.end());
+    for (int i = 0, len = word.size(); i < len; i++)  {
+      if (ispunct(word[i])) {
+        word.erase(i--, 1);
+        len = word.size();
+      }
+    }
   }
   return;
 }
