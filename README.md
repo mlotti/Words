@@ -5,7 +5,6 @@ Count the occurrence of each unique word in a file. The words are read as a defa
 The program can be compiled with
 
 ```
-cd work
 make
 ```
 
