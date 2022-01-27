@@ -12,7 +12,7 @@ make
 and executed with 
 
 ```
-./exe
+./test.exe
 ```
 
 # TO-DO: 
