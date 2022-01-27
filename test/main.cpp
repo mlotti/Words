@@ -29,7 +29,7 @@ int main()
     std::cout << "---------------------- " << "\n";
   }
 
-  text.read("../test/test.txt");
+  text.read("test/test.txt");
 
   // removes dots, commas, question marks, etc.
   text.removePunctuation();
