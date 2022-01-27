@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cassert>
 
 #include "Test.h"
 #include "Text.h"
@@ -16,7 +17,8 @@ bool Test::testReading() {
   Text t;
   t.addWord("Start");
   t.addWord("End");
-  return t.getWords().front() == "Start";
+  assert (t.getWords().front() == "End");
+  return t.getWords().front() == "End";
 }
 
 bool Test::testPunctuation() {
@@ -25,6 +27,7 @@ bool Test::testPunctuation() {
   t.addWord("End!");
   t.addWord("End!");
   t.removePunctuation();
+  assert(t.getWords().front() == "Start" && t.getWords().back() == "End");
   return t.getWords().front() == "Start" && t.getWords().back() == "End";
 }
 
@@ -33,6 +36,7 @@ bool Test::testOccurence() {
   t.addWord("that");
   t.addWord("test");
   t.addWord("that");
+  assert(t.countOccurence("that") == 2);
   return t.countOccurence("that") == 2;
 }
 
@@ -41,6 +45,7 @@ bool Test::testGetOccurenceMap() {
   t.addWord("do");
   t.addWord("that");
   t.addWord("do");
+  assert(t.getOccurenceMap().count("do") && t.getOccurenceMap().find("do")->second == 2);
   return t.getOccurenceMap().count("do") && t.getOccurenceMap().find("do")->second == 2;
 }
 

@@ -17,6 +17,7 @@ int main()
     std::cout << "RUNNING testReading: " << "\n";
     test.print(test.testReading());
 
+
     std::cout << "RUNNING testPunctuation: " << "\n";
     test.print(test.testPunctuation());
 
