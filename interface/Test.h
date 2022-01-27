@@ -13,9 +13,13 @@ class Test {
 
   bool testReading();
 
+  bool testPunctuation();
+
   bool testOccurence();
 
   bool testGetOccurenceMap();
+
+  void print(bool result);
 };
 
 
