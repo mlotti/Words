@@ -17,8 +17,8 @@ bool Test::testReading() {
   Text t;
   t.addWord("Start");
   t.addWord("End");
-  assert (t.getWords().front() == "End");
-  return t.getWords().front() == "End";
+  assert (t.getWords().front() == "Start");
+  return t.getWords().front() == "Start";
 }
 
 bool Test::testPunctuation() {
