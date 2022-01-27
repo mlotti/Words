@@ -83,7 +83,7 @@ void Text::lowerCaseWords() {
 
   for (auto &word : words) {
     for (int i = 0; i < word.size(); i++)  {
-      if (!isdigit(word[i]) && isupper(word[i])) {
+      if (!ispunct(word[i]) && !isdigit(word[i]) && isupper(word[i])) {
         word[i] = tolower(word[i]);
       }
     }
