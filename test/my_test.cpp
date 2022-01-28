@@ -25,10 +25,10 @@ int main()
     test.print(test.testLowerCaseWords());
 
     std::cout << "RUNNING testOccurence: " << "\n";
-    test.print(test.testOccurence());
+    test.print(test.testOccurrence());
 
     std::cout << "RUNNING testGetOccurenceMap: " << "\n";
-    test.print(test.testGetOccurenceMap());
+    test.print(test.testGetOccurrenceMap());
 
     std::cout << "---------------------- " << "\n";
   }
@@ -41,15 +41,27 @@ int main()
   // all words to lowercase
 //  text.lowerCaseWords();
 
-  // creates the map with unique words and their occurances
-  result = text.getOccurenceMap();
+  // creates the map with unique words and their occurrences
+  result = text.getOccurrenceMap();
 
-  std::cout << " Result on test.txt " << "\n";
+
+  // if you want to find the number of occurrences of a word
+  // check if the word is part of the map
+/*
+  std::string word = "do";
+  if (result.count(word)) {
+     std::cout << result.find(word)->second << "\n";
+  } else {
+     std::cout << word << "not part of the occurrence map" << "\n";
+  }
+*/
+
+  std::cout << " Result using file: test.txt " << "\n";
 
   // Print the occurence of all words in the map
   for (auto &element : result) {
     std::cout << " " << element.second << ": " << element.first << "\n";
   }
 
-    return 0;
+  return 0;
 }
