@@ -24,7 +24,7 @@ bool Test::testReading() {
 bool Test::testPunctuation() {
   Text t;
   t.addWord("Start*");
-  t.addWord("!E#nd!");
+  t.addWord("!E#!nd!");
   t.removePunctuation();
   assert(t.getWords().front() == "Start" && t.getWords().back() == "End");
   return t.getWords().front() == "Start" && t.getWords().back() == "End";
