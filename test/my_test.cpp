@@ -24,10 +24,10 @@ int main()
     std::cout << "RUNNING testLowerCaseWords: " << "\n";
     test.print(test.testLowerCaseWords());
 
-    std::cout << "RUNNING testOccurence: " << "\n";
+    std::cout << "RUNNING testOccurrence: " << "\n";
     test.print(test.testOccurrence());
 
-    std::cout << "RUNNING testGetOccurenceMap: " << "\n";
+    std::cout << "RUNNING testGetOccurrenceMap: " << "\n";
     test.print(test.testGetOccurrenceMap());
 
     std::cout << "---------------------- " << "\n";
