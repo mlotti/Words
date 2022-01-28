@@ -16,11 +16,11 @@ class Text {
 
   void addWord(std::string word);
 
-  int countOccurence(std::string word);
+  int countOccurrence(std::string word);
 
   std::vector<std::string> getWords() {return words;}
 
-  std::map<std::string, int> getOccurenceMap();
+  std::map<std::string, int> getOccurrenceMap();
 
   void removePunctuation();
 

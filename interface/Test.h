@@ -15,9 +15,9 @@ class Test {
 
   bool testPunctuation();
 
-  bool testOccurence();
+  bool testOccurrence();
 
-  bool testGetOccurenceMap();
+  bool testGetOccurrenceMap();
 
   bool testLowerCaseWords();
 

@@ -24,34 +24,33 @@ bool Test::testReading() {
 bool Test::testPunctuation() {
   Text t;
   t.addWord("Start*");
-  t.addWord("#End!");
-  t.addWord("!E!nd!");
+  t.addWord("!E#nd!");
   t.removePunctuation();
   assert(t.getWords().front() == "Start" && t.getWords().back() == "End");
   return t.getWords().front() == "Start" && t.getWords().back() == "End";
 }
 
-bool Test::testOccurence() {
+bool Test::testOccurrence() {
   Text t;
   t.addWord("that");
   t.addWord("test");
   t.addWord("that");
-  assert(t.countOccurence("that") == 2);
-  return t.countOccurence("that") == 2;
+  assert(t.countOccurrence("that") == 2);
+  return t.countOccurrence("that") == 2;
 }
 
-bool Test::testGetOccurenceMap() {
+bool Test::testGetOccurrenceMap() {
   Text t;
   t.addWord("do");
   t.addWord("that");
   t.addWord("do");
-  assert(t.getOccurenceMap().count("do") && t.getOccurenceMap().find("do")->second == 2);
-  return t.getOccurenceMap().count("do") && t.getOccurenceMap().find("do")->second == 2;
+  assert(t.getOccurrenceMap().count("do") && t.getOccurrenceMap().find("do")->second == 2);
+  return t.getOccurrenceMap().count("do") && t.getOccurrenceMap().find("do")->second == 2;
 }
 
 bool Test::testLowerCaseWords() {
   Text t;
-  t.addWord("Start");
+  t.addWord("StaRt");
   t.addWord("END");
   t.lowerCaseWords();
   assert(t.getWords().front() == "start" && t.getWords().back() == "end");

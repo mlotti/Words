@@ -38,7 +38,7 @@ void Text::addWord(std::string word) {
   words.push_back(word);
 }
 
-int Text::countOccurence(std::string word) {
+int Text::countOccurrence(std::string word) {
 
   int count = 0;
   for (auto &w : words) {
@@ -49,14 +49,14 @@ int Text::countOccurence(std::string word) {
   return count;
 }
 
-std::map<std::string, int> Text::getOccurenceMap() {
+std::map<std::string, int> Text::getOccurrenceMap() {
 
   std::map<std::string, int> result;
 
   for (auto &word : words) {
     // Check if the word is part of the map
     if (result.count(word)) {
-      // Increment the occurence by one
+      // Increment the occurrence by one
       result.find(word)->second++;
     } else {
       // if the word is new we insert it to the map
