@@ -28,8 +28,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run tests
         run: |
-          echo Make:
           make
           echo Running tests:
-          ./test.exe
+          ./test/test_reading.exe
+          ./test/test_punctuation.exe
+          ./test/test_lowerCaseWords.exe
+          ./test/test_occurrence.exe
+          ./test/test_getOccurrenceMap.exe
+          ./test/my_test.exe
           
